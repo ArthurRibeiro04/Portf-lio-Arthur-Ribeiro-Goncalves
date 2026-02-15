@@ -52,7 +52,40 @@ O portfólio está disponível online através do link:
 # Clone o repositório
 git clone https://github.com/seu-usuario/nome-do-repositorio.git
 
+
+
 # Entre no diretório
 cd nome-do-repositorio
 
 # Abra o arquivo index.html no navegador
+```
+</details>
+
+---
+
+<details>
+<summary><strong>🔥 Projetos em Destaque</strong></summary>
+
+<br>
+
+| Projeto | Descrição | Tecnologias |
+|----------|------------|--------------|
+| Nome do Projeto 1 | Breve descrição | HTML, CSS, JS |
+| Nome do Projeto 2 | Breve descrição | React, Node.js |
+| Nome do Projeto 3 | Breve descrição | Vue, Firebase |
+
+</details>
+
+---
+
+<details> <summary><strong>📫 Contato</strong></summary>
+
+- E-mail: seu-email@exemplo.com
+
+- LinkedIn: [Seu Perfil]
+
+- GitHub: [@seu-usuario]
+
+- Portfólio Online: [link do portfólio]
+
+</details>
