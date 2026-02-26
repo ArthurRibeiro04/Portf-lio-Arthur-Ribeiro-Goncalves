@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.header`
   width: 100%;
   height: 80px;
-  background: ${props => props.theme.colors.surface}cc;
+  background: ${({ theme }) => theme.background.primary};
   backdrop-filter: blur(10px);
   display: flex;
   align-items: center;

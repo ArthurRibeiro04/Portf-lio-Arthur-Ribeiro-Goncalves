@@ -1,15 +1,7 @@
 import 'styled-components';
+import { Theme } from '../styles/theme';
 
 declare module 'styled-components' {
-  export interface DefaultTheme {
-    colors: {
-      primary: string;
-      secondary: string;
-      background: string;
-      surface: string;       // Adicione esta linha
-      text: string;
-      textSecondary: string; // Adicione esta linha
-      accent: string;
-    };
-  }
+  // eslint-disable-next-line @typescript-eslint/no-empty-object-type
+  export interface DefaultTheme extends Theme {}
 }
