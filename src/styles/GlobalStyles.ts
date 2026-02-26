@@ -10,7 +10,13 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: ${props => props.theme.colors.background};
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: ${({ theme }) => theme.background.primary};
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     color: ${props => props.theme.colors.text};
     font-family: 'Montserrat', sans-serif;
   }
