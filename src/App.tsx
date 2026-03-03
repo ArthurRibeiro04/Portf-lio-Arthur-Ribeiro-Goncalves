@@ -1,16 +1,17 @@
-import { ThemeProvider } from 'styled-components';
-import { theme } from './styles/theme';
-import { GlobalStyle } from './styles/GlobalStyles';
+import { BrowserRouter } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+
 import { Home } from "./pages/Home";
-import Header from './components/Header';
+import { Sobre } from "./pages/Sobre";
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <Header />
-      <Home></Home>
-    </ThemeProvider>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/sobre" element={<Sobre />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

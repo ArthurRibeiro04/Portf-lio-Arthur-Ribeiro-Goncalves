@@ -9,12 +9,14 @@ import {
   NavButton,
 } from "./styles";
 
+import Header from "../../components/Header";
 import { motion } from "framer-motion";
 import ArthurImage from "../../assets/arthur.png";
 
 export function Home() {
   return (
     <Container>
+      <Header />
       <TopSection>
         <LeftText
           as={motion.h1}
