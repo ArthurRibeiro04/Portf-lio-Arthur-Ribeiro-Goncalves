@@ -7,6 +7,7 @@ import {
   Paragraph,
   ImageWrapper,
   Image,
+  TecnologiasSection,
 } from "./styles";
 
 import { motion } from "framer-motion";
@@ -14,6 +15,7 @@ import type { Variants } from "framer-motion";
 
 import ArthurImage from "../../assets/arthur2.png";
 import Header from "../../components/Header";
+import TechCarousel from "../../components/TechCarousel";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 40 },
@@ -107,6 +109,20 @@ export function Sobre() {
           <Image src={ArthurImage} alt="Arthur Ribeiro" />
         </ImageWrapper>
       </HistorySection>
+
+      <TecnologiasSection>
+        <Hero
+          as={motion.div}
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+        >
+          <Title>Tecnologias</Title>
+        </Hero>
+
+        <TechCarousel></TechCarousel>
+
+      </TecnologiasSection>
     </Container>
     </>
   );
