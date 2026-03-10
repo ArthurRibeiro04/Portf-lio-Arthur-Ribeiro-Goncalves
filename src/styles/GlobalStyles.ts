@@ -19,6 +19,7 @@ export const GlobalStyle = createGlobalStyle`
     background-size: cover;
     color: ${props => props.theme.colors.text};
     font-family: 'Montserrat', sans-serif;
+      
   }
 
   button {
