@@ -62,3 +62,49 @@ export const Image = styled.img`
     height: 260px;
   }
 `;
+
+export const TecnologiasSection = styled.section`
+  margin-top: 120px;
+  text-align: center;
+
+  h2{
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+`
+
+export const Carrossel = styled.div`
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  padding: 20px;
+
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar{
+    display: none;
+  }
+`
+
+export const TechCard = styled.div`
+  min-width: 110px;
+  height: 110px;
+
+  background: #111;
+  border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.3s;
+
+  img{
+    width: 55px;
+  }
+
+  &:hover{
+    transform: translateY(-6px);
+    background: #1c1c1c;
+  }
+`
