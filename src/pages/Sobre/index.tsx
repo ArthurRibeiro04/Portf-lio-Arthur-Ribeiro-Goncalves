@@ -16,6 +16,7 @@ import type { Variants } from "framer-motion";
 import ArthurImage from "../../assets/arthur2.png";
 import Header from "../../components/Header";
 import TechCarousel from "../../components/TechCarousel";
+import { ExperienciaTimeline } from "../../components/ExperienciaTimeline"
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 40 },
@@ -123,6 +124,8 @@ export function Sobre() {
         <TechCarousel></TechCarousel>
 
       </TecnologiasSection>
+
+      <ExperienciaTimeline></ExperienciaTimeline>
     </Container>
     </>
   );

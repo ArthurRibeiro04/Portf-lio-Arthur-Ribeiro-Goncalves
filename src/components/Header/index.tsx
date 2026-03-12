@@ -4,7 +4,10 @@ import { NavLink } from "react-router-dom";
 const Header = () => {
   return (
     <S.Container>
-      <S.Logo>Portfólio Arthur Ribeiro</S.Logo>
+
+      <NavLink to="/">
+        <S.Logo>Portfólio Arthur Ribeiro</S.Logo>
+      </NavLink>
 
       <S.Nav>
         <ul>
