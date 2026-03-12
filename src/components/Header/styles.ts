@@ -27,11 +27,14 @@ export const Logo = styled.h1`
   color: ${props => props.theme.colors.text};
   text-transform: uppercase;
   letter-spacing: 1px;
+  cursor: pointer;
 
   color: ${props => props.theme.colors.primary};
   background: linear-gradient(90deg, #3b82f6, #60a5fa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  
+
 
   span {
     
