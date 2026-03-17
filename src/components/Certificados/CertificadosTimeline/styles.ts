@@ -25,7 +25,7 @@ export const Timeline = styled.div`
 
     transform: translateX(-50%);
 
-    width: 2px;
+    width: 3px;
     height: 100%;
 
     background: linear-gradient(
@@ -35,5 +35,18 @@ export const Timeline = styled.div`
       #00d9ff,
       transparent
     );
+
+    box-shadow: 0 0 20px #00d9ff;
+
+    animation: glowLine 3s infinite alternate;
+  }
+
+  @keyframes glowLine {
+    from {
+      box-shadow: 0 0 10px #00d9ff;
+    }
+    to {
+      box-shadow: 0 0 25px #00d9ff;
+    }
   }
 `;

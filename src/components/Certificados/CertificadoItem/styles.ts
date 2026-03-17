@@ -20,21 +20,33 @@ export const Container = styled.div<{ side: "left" | "right" }>`
 export const Dot = styled.div<{ side: "left" | "right" }>`
   position: absolute;
   top: 40px;
+
   width: 16px;
   height: 16px;
+
   background: #00d9ff;
   border-radius: 50%;
 
   ${({ side }) =>
     side === "left"
-      ? `
-    right: -8px;
-  `
-      : `
-    left: -8px;
-  `}
+      ? `right: -8px;`
+      : `left: -8px;`}
 
   box-shadow: 0 0 12px #00d9ff;
+
+  animation: pulse 2s infinite;
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(0, 217, 255, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 15px rgba(0, 217, 255, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(0, 217, 255, 0);
+    }
+  }
 `;
 
 export const Card = styled.div`
@@ -48,7 +60,12 @@ export const Card = styled.div`
   &:hover {
     transform: translateY(-6px);
     border-color: #00d9ff;
-    box-shadow: 0 10px 30px rgba(0, 217, 255, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 217, 255, 0.2);
+  }
+
+  &:hover iframe,
+  &:hover img {
+    transform: scale(1.05);
   }
 `;
 
@@ -56,12 +73,16 @@ export const PreviewPDF = styled.iframe`
   width: 100%;
   height: 200px;
   border: none;
+
+  transition: transform 0.4s ease;
 `;
 
 export const PreviewImg = styled.img`
   width: 100%;
   height: 200px;
   object-fit: cover;
+
+  transition: transform 0.4s ease;
 `;
 
 export const Info = styled.div`
