@@ -5,11 +5,22 @@ export const Backdrop = styled.div`
   inset: 0;
 
   background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(8px);
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  animation: fadeIn 0.3s ease;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 
   z-index: 999;
 `;
