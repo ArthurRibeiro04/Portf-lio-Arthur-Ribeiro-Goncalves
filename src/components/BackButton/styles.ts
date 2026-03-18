@@ -38,7 +38,6 @@ export const Container = styled.button`
   transition: all 0.3s ease;
   animation: ${slideIn} 0.5s ease;
 
-  /* glow suave */
   box-shadow: 0 0 0 rgba(255, 255, 255, 0);
 
   span {

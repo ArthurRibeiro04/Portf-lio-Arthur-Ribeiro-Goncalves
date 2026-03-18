@@ -24,7 +24,7 @@ export const Overlay = styled.div`
   align-items: center;
 
   opacity: 0;
-  transform: translateY(10px); /* menor deslocamento */
+  transform: translateY(10px); 
 
   transition: all 0.3s ease;
 `;
