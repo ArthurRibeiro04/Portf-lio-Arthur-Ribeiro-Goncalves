@@ -1,4 +1,3 @@
-
 FROM node:18-alpine AS builder
 
 WORKDIR /app
@@ -13,13 +12,10 @@ FROM node:18-alpine
 
 WORKDIR /app
 
-COPY --from=builder /app/package*.json ./
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/node_modules ./node_modules
+RUN npm install -g serve
 
-ENV NODE_ENV=production
+COPY --from=builder /app/dist ./dist
 
 EXPOSE 3000
 
-CMD ["npx", "next", "start", "-p", "3000"]
+CMD ["serve", "-s", "dist", "-l", "3000"]
