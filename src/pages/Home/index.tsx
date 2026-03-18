@@ -1,77 +1,117 @@
 import {
   Container,
-  TopSection,
-  LeftText,
-  RightText,
-  ImageWrapper,
+  LeftSection,
+  RightSection,
   Image,
-  ButtonsWrapper,
-  NavButton,
+  IntroText,
+  LinksWrapper,
+  NavLinkStyled,
+  Title,
 } from "./styles";
 
-import Header from "../../components/Header";
+
+
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import ArthurImage from "../../assets/arthur.png";
 
 export function Home() {
+  const navigate = useNavigate();
+
   return (
     <Container>
-      <Header />
-      <TopSection>
-        <LeftText
-          as={motion.h1}
-          initial={{ x: -120, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-        >
+      <Title
+        as={motion.h1}
+        initial={{ opacity: 0, y: -60 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        Portfólio — Arthur Ribeiro Gonçalves
+      </Title>
+      {/* ESQUERDA */}
+      <LeftSection
+        as={motion.div}
+        initial={{ x: -80, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.8 }}
+      >
+        <Image src={ArthurImage} alt="Arthur Ribeiro" />
+
+        <IntroText>
           Olá, muito prazer,
           <br />
           me chamo Arthur Ribeiro...
-        </LeftText>
+        </IntroText>
+      </LeftSection>
 
-        <ImageWrapper
+      {/* DIREITA */}
+      <RightSection>
+        <LinksWrapper
           as={motion.div}
-          initial={{ y: -120, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {},
+            visible: {
+              transition: {
+                staggerChildren: 0.2,
+              },
+            },
+          }}
         >
-          <Image src={ArthurImage} alt="Arthur Ribeiro" />
-        </ImageWrapper>
+          <NavLinkStyled
+            as={motion.div}
+            variants={{
+              hidden: { opacity: 0, x: 60 },
+              visible: { opacity: 1, x: 0 },
+            }}
+            whileHover={{ x: 15 }}
+            transition={{ duration: 0.5 }}
+            onClick={() => navigate("/sobre")}
+          >
+            Sobre
+          </NavLinkStyled>
 
-        <RightText
-          as={motion.h1}
-          initial={{ x: 120, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-        >
-          Venha conhecer mais sobre mim
-          <br />
-          e sobre minha carreira.
-        </RightText>
-      </TopSection>
+          <NavLinkStyled
+            as={motion.div}
+            variants={{
+              hidden: { opacity: 0, x: 60 },
+              visible: { opacity: 1, x: 0 },
+            }}
+            whileHover={{ x: 15 }}
+            transition={{ duration: 0.5 }}
+            onClick={() => navigate("/projetos")}
+          >
+            Projetos
+          </NavLinkStyled>
 
-      <ButtonsWrapper
-        as={motion.div}
-        initial={{ y: 120, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.9, delay: 0.7 }}
-      >
-        <NavButton whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-          Sobre
-        </NavButton>
+          <NavLinkStyled
+            as={motion.div}
+            variants={{
+              hidden: { opacity: 0, x: 60 },
+              visible: { opacity: 1, x: 0 },
+            }}
+            whileHover={{ x: 15 }}
+            transition={{ duration: 0.5 }}
+            onClick={() => navigate("/certificados")}
+          >
+            Certificados
+          </NavLinkStyled>
 
-        <NavButton whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-          Projetos
-        </NavButton>
-
-        <NavButton whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-          Certificados
-        </NavButton>
-
-        <NavButton whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-          Contato
-        </NavButton>
-      </ButtonsWrapper>
+          <NavLinkStyled
+            as={motion.div}
+            variants={{
+              hidden: { opacity: 0, x: 60 },
+              visible: { opacity: 1, x: 0 },
+            }}
+            whileHover={{ x: 15 }}
+            transition={{ duration: 0.5 }}
+            onClick={() => navigate("/contato")}
+          >
+            Contato
+          </NavLinkStyled>
+        </LinksWrapper>
+      </RightSection>
     </Container>
   );
 }

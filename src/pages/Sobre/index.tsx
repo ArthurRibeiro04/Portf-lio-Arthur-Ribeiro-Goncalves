@@ -14,9 +14,9 @@ import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 
 import ArthurImage from "../../assets/arthur2.png";
-import Header from "../../components/Header";
 import TechCarousel from "../../components/TechCarousel";
 import { ExperienciaTimeline } from "../../components/ExperienciaTimeline"
+import BackButton from "../../components/BackButton";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 40 },
@@ -57,8 +57,8 @@ const containerStagger: Variants = {
 export function Sobre() {
   return (
     <>
-    <Header />
     <Container>
+      <BackButton></BackButton>
       <Hero
         as={motion.div}
         variants={fadeUp}

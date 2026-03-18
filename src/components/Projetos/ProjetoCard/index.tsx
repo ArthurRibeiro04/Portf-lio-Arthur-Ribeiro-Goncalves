@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import {
   Card,
   Image,
@@ -23,7 +24,27 @@ interface ProjetoCardProps {
 
 const ProjetoCard = ({ projeto, onOpen }: ProjetoCardProps) => {
   return (
-    <Card>
+    <Card
+      as={motion.div}
+      variants={{
+        hidden: {
+          opacity: 0,
+          y: 50,
+          scale: 0.95,
+        },
+        visible: {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+        },
+      }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      whileHover={{
+        y: -10,
+        scale: 1.03,
+      }}
+      whileTap={{ scale: 0.97 }}
+    >
       <Image src={projeto.imagens[0]} alt={projeto.nome} />
 
       <Overlay>
