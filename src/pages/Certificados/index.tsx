@@ -1,11 +1,11 @@
+import BackButton from "../../components/BackButton";
 import { CertificadosTimeline } from "../../components/Certificados/CertificadosTimeline";
-import Header from "../../components/Header";
 
 export function Certificados() {
   return (
 
     <>
-      <Header></Header>
+      <BackButton></BackButton>
       <CertificadosTimeline />;
     </>
 

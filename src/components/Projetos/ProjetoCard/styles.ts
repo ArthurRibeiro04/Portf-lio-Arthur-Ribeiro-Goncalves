@@ -1,26 +1,15 @@
 import styled from "styled-components";
 
-export const Card = styled.div`
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-  cursor: pointer;
 
-  &:hover img {
-    transform: scale(1.1);
-  }
 
-  &:hover div {
-    opacity: 1;
-  }
-`;
+
 
 export const Image = styled.img`
   width: 100%;
   height: 260px;
   object-fit: cover;
 
-  transition: transform 0.4s ease;
+  transition: transform 0.5s ease;
 `;
 
 export const Overlay = styled.div`
@@ -35,8 +24,31 @@ export const Overlay = styled.div`
   align-items: center;
 
   opacity: 0;
+  transform: translateY(10px); /* menor deslocamento */
 
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
+`;
+
+export const Card = styled.div`
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  &:hover img {
+    transform: scale(1.08);
+  }
+
+  &:hover ${Overlay} {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  }
 `;
 
 export const Title = styled.h3`
@@ -83,11 +95,17 @@ export const Buttons = styled.div`
 
     text-decoration: none;
 
-    transition: 0.2s;
+    transition: all 0.2s ease;
   }
 
   a:hover,
   button:hover {
     background: #00b6db;
+    transform: scale(1.08);
+  }
+
+  a:active,
+  button:active {
+    transform: scale(0.95);
   }
 `;

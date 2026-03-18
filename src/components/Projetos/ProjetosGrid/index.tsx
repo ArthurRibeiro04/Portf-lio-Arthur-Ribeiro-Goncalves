@@ -5,7 +5,8 @@ import ProjetoCard from "../ProjetoCard";
 import ProjetoModal from "../ProjetoModal";
 
 import { Container, Grid, Title } from "./styles";
-
+import BackButton from "../../BackButton";
+import { motion } from "framer-motion";
 interface Projeto {
   id: number;
   nome: string;
@@ -28,9 +29,23 @@ const ProjetosGrid = () => {
 
   return (
     <Container>
+      <BackButton></BackButton>
       <Title>Projetos</Title>
 
-      <Grid>
+      <Grid
+        as={motion.div}
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: {},
+          visible: {
+            transition: {
+              staggerChildren: 0.12,
+              delayChildren: 0.2,
+            },
+          },
+        }}
+      >
         {projetos.map((projeto) => (
           <ProjetoCard
             key={projeto.id}

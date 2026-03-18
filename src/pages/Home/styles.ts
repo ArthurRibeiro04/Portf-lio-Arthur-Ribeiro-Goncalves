@@ -1,118 +1,120 @@
 import styled from "styled-components";
-import { motion } from "framer-motion";
 
-export const Container = styled.main`
-  min-height: 100vh;
+export const Container = styled.div`
+  height: 100vh;
+  display: flex;
+  justify-content: center; /* antes era space-between */
+  align-items: center;
+
+  gap: 120px; /* controla distância entre esquerda e direita */
+
+  padding: 0 80px;
+  color: #fff;
+`;
+
+export const LeftSection = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center; 
-`;
-
-export const TopSection = styled.div`
-  width: 90%;
-  max-width: 1400px;
-  margin: 0 auto;
-
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  gap: 4rem;
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 2.5rem;
-  }
-`;
-
-export const LeftText = styled.h1`
-  font-size: 3rem;
-  font-weight: 600;
-  color: #ffffff;
-  text-align: right;
-  line-height: 1.2;
-  max-width: 420px;
-  justify-self: end;
-
-  @media (max-width: 768px) {
-    font-size: 2rem;
-    text-align: center;
-    justify-self: center;
-  }
-`;
-
-export const RightText = styled.h1`
-  font-size: 3rem;
-  font-weight: 600;
-  color: #ffffff;
-  text-align: left;
-  line-height: 1.2;
-  max-width: 420px;
-  justify-self: start;
-
-  @media (max-width: 768px) {
-    font-size: 2rem;
-    text-align: center;
-    justify-self: center;
-  }
-`;
-
-export const ImageWrapper = styled.div`
-  display: flex;
-  justify-content: center;
+  gap: 30px;
 `;
 
 export const Image = styled.img`
   width: 340px;
   height: 340px;
-  object-fit: cover;
+
   border-radius: 50%;
-  box-shadow: 0 0 60px rgba(255, 255, 255, 0.06);
+  object-fit: cover;
 
-  @media (max-width: 768px) {
-    width: 220px;
-    height: 220px;
-  }
-`;
+  border: 3px solid #fff;
 
-export const ButtonsWrapper = styled.div`
-  width: 100%;
-  max-width: 1400px;
-  margin-top: 4rem;
-  display: flex;
-  justify-content: center;
-  gap: 2.5rem;
+  box-shadow: 0 0 60px rgba(255, 255, 255, 0.2);
 
-  @media (max-width: 768px) {
-    flex-wrap: wrap;
-    gap: 1.2rem;
-    margin-top: 3rem;
-  }
-`;
-
-export const NavButton = styled(motion.button)`
-  padding: 1.2rem 2.8rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 40px;
-
-  background: transparent;
-  color: #ffffff;
-
-  cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.4s ease;
 
   &:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+  }
+`;
+
+export const IntroText = styled.h2`
+  font-size: 24px;
+  text-align: center;
+  line-height: 1.4;
+`;
+
+export const RightSection = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const LinksWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+`;
+
+export const NavLinkStyled = styled.div`
+  font-size: 52px;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+
+  transition: all 0.3s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+
+    width: 0%;
+    height: 2px;
+
+    background: linear-gradient(90deg, #fff, transparent);
+
+    transition: width 0.4s ease;
   }
 
-  @media (max-width: 768px) {
-    padding: 0.9rem 1.8rem;
-    font-size: 0.95rem;
-    width: 45%;
+  &:hover::after {
+    width: 100%;
+  }
+
+  &:hover {
+    opacity: 0.85;
+  }
+`;
+
+export const Title = styled.h1`
+  width: 100%;
+  text-align: center;
+
+  position: absolute;
+  top: 40px;
+  left: 0;
+
+  font-size: 52px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  color: #ffffff;
+
+  text-shadow: 
+    0 0 10px rgba(255, 255, 255, 0.4),
+    0 0 20px rgba(255, 255, 255, 0.2);
+
+  animation: glow 3s ease-in-out infinite alternate;
+
+  @keyframes glow {
+    from {
+      text-shadow: 
+        0 0 10px rgba(255, 255, 255, 0.3),
+        0 0 20px rgba(255, 255, 255, 0.15);
+    }
+    to {
+      text-shadow: 
+        0 0 20px rgba(255, 255, 255, 0.6),
+        0 0 40px rgba(255, 255, 255, 0.3);
+    }
   }
 `;
