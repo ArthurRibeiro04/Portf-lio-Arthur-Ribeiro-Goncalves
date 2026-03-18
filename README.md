@@ -1,91 +1,73 @@
-# 💼 Meu Portfólio  
+# React + TypeScript + Vite
 
-Olá! Seja bem-vindo(a) ao repositório do meu portfólio pessoal.  
-Este projeto foi desenvolvido para apresentar meus trabalhos, habilidades e um pouco sobre minha trajetória como desenvolvedor.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
----
+Currently, two official plugins are available:
 
-<details>
-<summary><strong>📌 Sobre</strong></summary>
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-Este portfólio foi criado com o objetivo de reunir e apresentar meus principais projetos de forma organizada e visualmente atraente.  
-Aqui você encontra informações sobre mim, minhas habilidades técnicas e links para meus trabalhos.
+## React Compiler
 
-</details>
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
----
+## Expanding the ESLint configuration
 
-<details>
-<summary><strong>🚀 Tecnologias Utilizadas</strong></summary>
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-- HTML5  
-- CSS3  
-- JavaScript  
-- [Inserir outras tecnologias utilizadas]
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-</details>
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
 
----
-
-<details>
-<summary><strong>⚙️ Funcionalidades</strong></summary>
-
-- Design responsivo para diferentes dispositivos  
-- Seção de projetos com links para repositórios e demonstrações  
-- Página sobre mim com trajetória profissional  
-- Formulário de contato integrado  
-- Links para redes sociais  
-
-</details>
-
----
-
-<details>
-<summary><strong>🌐 Como Visualizar</strong></summary>
-
-O portfólio está disponível online através do link:  
-🔗 [Inserir URL do portfólio]
-
-### Rodar localmente:
-
-```bash
-# Clone o repositório
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-
-
-
-# Entre no diretório
-cd nome-do-repositorio
-
-# Abra o arquivo index.html no navegador
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
-</details>
 
----
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-<details>
-<summary><strong>🔥 Projetos em Destaque</strong></summary>
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-<br>
-
-| Projeto | Descrição | Tecnologias |
-|----------|------------|--------------|
-| Nome do Projeto 1 | Breve descrição | HTML, CSS, JS |
-| Nome do Projeto 2 | Breve descrição | React, Node.js |
-| Nome do Projeto 3 | Breve descrição | Vue, Firebase |
-
-</details>
-
----
-
-<details> <summary><strong>📫 Contato</strong></summary>
-
-- E-mail: seu-email@exemplo.com
-
-- LinkedIn: [Seu Perfil]
-
-- GitHub: [@seu-usuario]
-
-- Portfólio Online: [link do portfólio]
-
-</details>
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
