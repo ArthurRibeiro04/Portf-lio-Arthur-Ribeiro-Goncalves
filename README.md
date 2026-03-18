@@ -74,26 +74,6 @@ npm run dev
 ---
 
 <details>
-<summary><strong>📸 Preview</strong></summary>
-
-Adicione aqui prints ou gifs do projeto para demonstrar a interface.
-
-</details>
-
----
-
-<details>
-<summary><strong>📞 Contato</strong></summary>
-
-* LinkedIn: https://linkedin.com/
-* GitHub: https://github.com/
-* Email: [seuemail@email.com](mailto:seuemail@email.com)
-
-</details>
-
----
-
-<details>
 <summary><strong>📄 Licença</strong></summary>
 
 Este projeto está sob a licença MIT.
