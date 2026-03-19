@@ -20,29 +20,29 @@ export default function Contato() {
       <BackButton/>
 
       <TopStripe>
-        <StripeImage src="/public/contact-1.jpg" />
-        <StripeImage src="/public/contact-2.jpg" />
-        <StripeImage src="/public/contact-3.jpg" />
-        <StripeImage src="/public/contact-left.jpg" />
-        <StripeImage src="/public/contact-right.jpg" />
-        <StripeImage src="/public/contact-1.jpg" />
-        <StripeImage src="/public/contact-2.jpg" />
-        <StripeImage src="/public/contact-3.jpg" />
-        <StripeImage src="/public/contact-left.jpg" />
-        <StripeImage src="/public/contact-right.jpg" />
+        <StripeImage src="/contact-1.jpg" />
+        <StripeImage src="/contact-2.jpg" />
+        <StripeImage src="/contact-3.jpg" />
+        <StripeImage src="/contact-left.jpg" />
+        <StripeImage src="/contact-right.jpg" />
+        <StripeImage src="/contact-1.jpg" />
+        <StripeImage src="/contact-2.jpg" />
+        <StripeImage src="/contact-3.jpg" />
+        <StripeImage src="/contact-left.jpg" />
+        <StripeImage src="/contact-right.jpg" />
       </TopStripe>
 
       <BottomStripe>
-        <StripeImage src="/public/contact-1.jpg" />
-        <StripeImage src="/public/contact-2.jpg" />
-        <StripeImage src="/public/contact-3.jpg" />
-        <StripeImage src="/public/contact-left.jpg" />
-        <StripeImage src="/public/contact-right.jpg" />
-        <StripeImage src="/public/contact-1.jpg" />
-        <StripeImage src="/public/contact-2.jpg" />
-        <StripeImage src="/public/contact-3.jpg" />
-        <StripeImage src="/public/contact-left.jpg" />
-        <StripeImage src="/public/contact-right.jpg" />
+        <StripeImage src="/contact-1.jpg" />
+        <StripeImage src="/contact-2.jpg" />
+        <StripeImage src="/contact-3.jpg" />
+        <StripeImage src="/contact-left.jpg" />
+        <StripeImage src="/contact-right.jpg" />
+        <StripeImage src="/contact-1.jpg" />
+        <StripeImage src="/contact-2.jpg" />
+        <StripeImage src="/contact-3.jpg" />
+        <StripeImage src="/contact-left.jpg" />
+        <StripeImage src="/contact-right.jpg" />
       </BottomStripe>
 
       <Content>

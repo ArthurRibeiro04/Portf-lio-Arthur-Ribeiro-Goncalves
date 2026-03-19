@@ -2,19 +2,19 @@ import { CarouselContainer, Track, Card } from "./styles"
 import { motion} from "framer-motion"
 
 const tecnologias = [
-  { nome: "HTML", img: "/public/tecnologias/html.png" },
-  { nome: "CSS", img: "/public/tecnologias/css.png" },
-  { nome: "JavaScript", img: "/public/tecnologias/js.png" },
-  { nome: "Java", img: "/public/tecnologias/java.png" },
-  { nome: "React", img: "/public/tecnologias/react.svg" },
-  { nome: "Node", img: "/public/tecnologias/node.svg" },
-  { nome: "Python", img: "/public/tecnologias/python.png" },
-  { nome: "NestJS", img: "/public/tecnologias/nest.svg" },
-  { nome: "Flask", img: "/public/tecnologias/flask.svg" },
-  { nome: "Prisma", img: "/public/tecnologias/prisma.png" },
-  { nome: "PostgreSQL", img: "/public/tecnologias/postgres.png" },
-  { nome: "Django", img: "/public/tecnologias/django.png" },
-  { nome: "Docker", img: "/public/tecnologias/docker.png" }
+  { nome: "HTML", img: "/tecnologias/html.png" },
+  { nome: "CSS", img: "/tecnologias/css.png" },
+  { nome: "JavaScript", img: "/tecnologias/js.png" },
+  { nome: "Java", img: "/tecnologias/java.png" },
+  { nome: "React", img: "/tecnologias/react.svg" },
+  { nome: "Node", img: "/tecnologias/node.svg" },
+  { nome: "Python", img: "/tecnologias/python.png" },
+  { nome: "NestJS", img: "/tecnologias/nest.svg" },
+  { nome: "Flask", img: "/tecnologias/flask.svg" },
+  { nome: "Prisma", img: "/tecnologias/prisma.png" },
+  { nome: "PostgreSQL", img: "/tecnologias/postgres.png" },
+  { nome: "Django", img: "/tecnologias/django.png" },
+  { nome: "Docker", img: "/tecnologias/docker.png" }
 ]
 
 
